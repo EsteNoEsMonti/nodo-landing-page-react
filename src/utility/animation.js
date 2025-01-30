@@ -12,8 +12,8 @@ export const slideUp = (delay) => {
         delay,
       },
     },
-  };
-};
+  }
+}
 
 export const slideInFromSide = (direction = "left", delay) => {
   return {
@@ -27,6 +27,14 @@ export const slideInFromSide = (direction = "left", delay) => {
       transition: {
         duration: 0.5,
         delay,
+      },
+    },
+    animateFloating: {
+      y: [0, -15, 0, 15, 0],
+      transition: {
+        duration: 4,
+        repeat: Infinity,
+        ease: "easeInOut",
       },
     },
   };

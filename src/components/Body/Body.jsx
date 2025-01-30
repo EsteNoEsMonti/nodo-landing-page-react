@@ -1,4 +1,3 @@
-// @ts-nocheck
 import React from "react";
 import Personaje from "../../assets/Personaje.png";
 import Logo from "../../assets/Logo.png";
@@ -44,14 +43,15 @@ const Body = () => {
         <motion.div
           variants={slideInFromSide("right", 0.5)}
           initial="initial"
-          animate="animate"
-          className="p-10 sm:p-10 md:p-15 lg:p-30 xl:p-36 mt-[-100px]"
+          animate={["animate", "animateFloating"]}
+          className="p-10 sm:p-10 md:p-15 lg:p-30 xl:p-36 mt-[-100px] xl:mt-[-125px]"
         >
           <img src={Personaje} alt="Personaje de juego" />
         </motion.div>
+
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Body;
+export default Body
